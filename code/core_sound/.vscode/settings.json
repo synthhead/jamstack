@@ -1,0 +1,16 @@
+{
+  "cmake.configureOnOpen": false,
+  "files.associations": {
+    "*.ldt": "linkerscript",
+    "algorithm": "cpp"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true
+    // "**/jamstack/platform/sim": true
+  },
+  "editor.suggest.snippetsPreventQuickSuggestions": false
+}

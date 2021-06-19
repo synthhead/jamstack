@@ -1,0 +1,9 @@
+/*
+ * GENERATED FILE - DO NOT EDIT
+ * Generated linker script file for ${chipName}
+ * Created from ${.main_template_name} by ${basename}
+ * Using Freemarker v${.version}
+ * ${version}
+ <#-- assign listvars=true -->
+ <#include "listvars.ldt" >
+ */

@@ -1,0 +1,19 @@
+<#if memory.alias=="RAM2">
+*(.text*)
+. = ALIGN(${text_align});
+</#if>
+*(.data.$${memory.alias}*)
+*(.data.$${memory.name}*)
+
+/*
+
+Memory structure of core_sound:
+
+BOARD_FLASH   | Flash
+SRAM_DTC      | RAM
+SRAM_ITC      | RAM2
+SRAM_OC       | RAM3
+BOARD_SDRAM   | RAM4
+NCACHE_REGION | RAM5
+
+ */

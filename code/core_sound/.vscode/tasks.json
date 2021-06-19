@@ -1,0 +1,114 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Upload Firmware",
+      "type": "shell",
+      "command": "pyocd",
+      "args": [
+        "flash",
+        "--format",
+        "elf",
+        "--base-address",
+        "0x60000000",
+        "./Debug/old_core_sound.axf",
+        "-u",
+        "0226000047784e4500359002d99600359081000097969900"
+      ],
+      "windows": {
+        "options": {
+          "shell": {
+            "executable": "cmd.exe",
+            "args": ["/S", "/C"]
+          }
+        }
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Build Firmware",
+      "type": "shell",
+      "options": {
+        "cwd": "${workspaceFolder}/Debug"
+      },
+      "command": "make",
+      "windows": {
+        "command": "make",
+        "options": {
+          "cwd": "${workspaceFolder}/Debug",
+          "shell": {
+            "executable": "cmd.exe",
+            "args": ["/S", "/C"]
+          }
+        }
+      },
+      "args": ["-r", "-j16", "all"],
+      // "args": ["all"],
+      // "problemMatcher": {
+      //   "pattern": {
+      //     "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+      //     "file": 1,
+      //     "line": 2,
+      //     "column": 3,
+      //     "severity": 4,
+      //     "message": 5
+      //   }
+      // },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Build & Upload",
+      "dependsOrder": "sequence",
+      "dependsOn": ["Build Firmware", "Upload Firmware"],
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Clean Build",
+      "type": "shell",
+      "options": {
+        "cwd": "${workspaceFolder}/Debug"
+      },
+      "command": "make",
+      "windows": {
+        "command": "make",
+        "options": {
+          "cwd": "${workspaceFolder}/Debug",
+          "shell": {
+            "executable": "wsl.exe",
+            "args": ["-e"]
+          }
+        }
+      },
+      "args": ["clean"],
+      "problemMatcher": ["$gcc"],
+      // "problemMatcher": {
+      //   "pattern": {
+      //     "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+      //     "file": 1,
+      //     "line": 2,
+      //     "column": 3,
+      //     "severity": 4,
+      //     "message": 5
+      //   }
+      // },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

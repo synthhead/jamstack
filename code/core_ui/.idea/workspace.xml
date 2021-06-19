@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="69640f89-b403-4fba-8f32-9e1abc8b063d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../1176.code-workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../1176.code-workspace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1176_alpha/.cproject" beforeDir="false" afterPath="$PROJECT_DIR$/../1176_alpha/.cproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1176_alpha/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../1176_alpha/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1176_alpha/drivers/fsl_lpuart.c" beforeDir="false" afterPath="$PROJECT_DIR$/../1176_alpha/drivers/fsl_lpuart.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1176_beta/.cproject" beforeDir="false" afterPath="$PROJECT_DIR$/../1176_beta/.cproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1176_beta/.settings/language.settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../1176_beta/.settings/language.settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1176_beta/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../1176_beta/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1mWjIuAirOovhe8X3EK5YAuTRNF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.advertisement.text.overridden" value="true" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="69640f89-b403-4fba-8f32-9e1abc8b063d" name="Default Changelist" comment="" />
+      <created>1609616165218</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609616165218</updated>
+      <workItem from="1609616166418" duration="426000" />
+      <workItem from="1612307989059" duration="801000" />
+      <workItem from="1612308806916" duration="618000" />
+      <workItem from="1615379302081" duration="9000" />
+      <workItem from="1615379319410" duration="1335000" />
+      <workItem from="1616680991646" duration="51000" />
+      <workItem from="1618337207647" duration="234000" />
+      <workItem from="1618337997745" duration="78000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

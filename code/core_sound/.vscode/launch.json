@@ -1,0 +1,81 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Build & Debug",
+      "cwd": "${workspaceRoot}",
+      "executable": "./Debug/${fileBasename}.axf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "pyocd",
+      "serverArgs": [
+        "-b",
+        "0226000047784e4500359002d99600359081000097969900",
+        "--fast_program",
+        "--semihosting"
+        // "-r",
+        // "-R",
+        // "50002"
+        // "--semihost-console",
+        // "telnet"
+        // "--gdb-syscall"
+      ],
+      "interface": "swd",
+      // "device": "MIMXRT1021xxxxx",
+      "device": "mimxrt1020",
+      // "svdFile": "${workspaceRoot}/MIMXRT1011.xml",
+      "runToMain": true,
+      // "overrideRestartCommands": [
+      //   "load",
+      //   "monitor break-insert -t --function main",
+      //   "monitor reset"
+      // ],
+      "preRestartCommands": [
+        // "monitor break-insert -t --function main"
+        // "file ./Debug/core_sound.axf",
+        // "load",
+        // "enable breakpoint",
+        // "monitor reset"
+      ],
+      "postRestartCommands": [
+        // "monitor break-insert -t --function main"
+      ],
+      "postLaunchCommands": ["monitor arm semihosting enable"],
+      "preLaunchTask": "Build & Upload"
+    },
+    {
+      "name": "Debug only",
+      "cwd": "${workspaceRoot}",
+      "executable": "./Debug/core_sound.axf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "pyocd",
+      "serverArgs": [
+        "-b",
+        "0226000047784e4500359002d99600359081000097969900",
+        "--semihosting",
+        "--semihost-console",
+        "telnet"
+      ],
+      "interface": "swd",
+      "device": "MIMXRT1021xxxxx",
+      "svdFile": "${workspaceRoot}/MIMXRT1011.xml",
+      "runToMain": true,
+      // "overrideRestartCommands": [
+      //   "load",
+      //   "monitor break-insert -t --function main",
+      //   "monitor reset"
+      // ],
+      "preRestartCommands": [
+        // "monitor break-insert -t --function main"
+        // "file ./Debug/core_sound.axf",
+        // "load",
+        // "enable breakpoint",
+        // "monitor reset"
+      ],
+      "postRestartCommands": [
+        // "monitor break-insert -t --function main"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+<#if HEAP_STACK_STYLE?? && HEAP_STACK_STYLE == "sdk">
+    <#if HEAP_LOCATION == "Post Data">
+
+    /* Reserve and place Heap within memory map */
+    _HeapSize = ${HEAP_SIZE};
+    _zm_heap_start = ADDR(.data_RAM3) + SIZEOF(.data_RAM3) + SIZEOF(.bss_RAM3) + SIZEOF(.noinit_RAM3);
+    _zm_heap_end = ORIGIN(SRAM_OC) + LENGTH(SRAM_OC);
+    _zm_heap_len = _zm_heap_end - _zm_heap_start;
+
+    .heap :  ALIGN(${bss_align})
+    {
+        ${heap_symbol} = .;
+        . += _zm_heap_len;
+        . = ALIGN(${bss_align});
+        _pvHeapLimit = .;
+    } > ${HEAP_REGION}
+    </#if>
+    <#if STACK_LOCATION == "Post Data">
+
+    /* Reserve and place Stack within memory map */
+    _StackSize = ${STACK_SIZE};
+    .stack :  ALIGN(${bss_align})
+    {
+        _vStackBase = .;
+        . += _StackSize;
+        . = ALIGN(${bss_align});
+        _vStackTop = .;
+    } > ${STACK_REGION}
+    </#if>
+</#if>

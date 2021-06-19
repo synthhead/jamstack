@@ -1,0 +1,4 @@
+        *(.rodata.$${memory.alias})
+        *(.rodata.$${memory.name})
+        *(.rodata.$${memory.alias}.*)
+        *(.rodata.$${memory.name}.*)

@@ -1,0 +1,101 @@
+{
+  "env": {
+    "defaultIncludes": [
+      "${workspaceFolder}/board",
+      "${workspaceFolder}/CMSIS",
+      "${workspaceFolder}/component/**",
+      "${workspaceFolder}/device",
+      "${workspaceFolder}/drivers",
+      "${workspaceFolder}/jamstack/common/**",
+      "${workspaceFolder}/jamstack/platform/arm7em",
+      "${workspaceFolder}/source",
+      "${workspaceFolder}/startup",
+      "${workspaceFolder}/theplatform",
+      "${workspaceFolder}/utilities",
+      "${workspaceFolder}/xip"
+    ],
+    "defaultBrowse": [
+      // "${workspaceFolder}"
+      "${workspaceFolder}/board",
+      "${workspaceFolder}/CMSIS",
+      "${workspaceFolder}/component",
+      "${workspaceFolder}/device",
+      "${workspaceFolder}/drivers",
+      "${workspaceFolder}/jamstack/common",
+      "${workspaceFolder}/jamstack/platform/arm7em",
+      "${workspaceFolder}/source",
+      "${workspaceFolder}/startup",
+      "${workspaceFolder}/theplatform",
+      "${workspaceFolder}/utilities",
+      "${workspaceFolder}/xip"
+    ],
+    "defaultDefines": [
+      "CPU_MIMXRT1021DAG5A",
+      "CPU_MIMXRT1021DAG5A_cm7",
+      "FSL_RTOS_BM",
+      "SDK_OS_BAREMETAL",
+      "XIP_EXTERNAL_FLASH=1",
+      "XIP_BOOT_HEADER_ENABLE=1",
+      "SERIAL_PORT_TYPE_UART=1",
+      "__MCUXPRESSO",
+      "__USE_CMSIS",
+      "__NEWLIB__",
+      "DEBUG",
+      "SDK_DEBUGCONSOLE=1"
+    ],
+    "defaultCompilerArgs": [
+      // "-fno-common",
+      // "-g3",
+      // "-Wall",
+      // "-c",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-ffreestanding ",
+      // "-fno-builtin",
+      "-fno-rtti",
+      "-fno-exceptions",
+      // "-fmerge-constants",
+      "-mcpu=cortex-m7",
+      "-mfpu=fpv5-sp-d16",
+      "-mfloat-abi=hard",
+      "-mthumb"
+    ]
+  },
+  "configurations": [
+    {
+      "name": "Mac",
+      "intelliSenseMode": "arm",
+      // "intelliSenseMode": "gcc-arm",
+      "includePath": ["${defaultIncludes}"],
+      "compilerPath": "/usr/bin/clang",
+      "compilerArgs": ["${defaultCompilerArgs}"],
+      "defines": ["${defaultDefines"],
+      "cStandard": "gnu11",
+      "cppStandard": "c++17",
+      // "cppStandard": "gnu++17",
+      "browse": {
+        "path": ["${defaultIncludes}"],
+        "limitSymbolsToIncludedHeaders": true
+        // "databaseFilename": ""
+      }
+    },
+    {
+      "name": "Windows",
+      "intelliSenseMode": "gcc-arm",
+      "includePath": ["${defaultIncludes}"],
+      // "compilerPath": "C:\\nxp-tools\\tools\\bin\\arm-none-eabi-gcc.exe",
+      "compilerPath": "D:\\nxp\\MCUXpressoIDE_11.3.0_5222\\ide\\tools\\bin\\arm-none-eabi-gcc.exe",
+      "compilerArgs": ["${defaultCompilerArgs}"],
+      "defines": ["${defaultDefines"],
+      "cStandard": "gnu11",
+      "cppStandard": "gnu++17",
+      "browse": {
+        // "path": ["${defaultIncludes}"],
+        "path": ["${defaultBrowse}"]
+        // "limitSymbolsToIncludedHeaders": true
+        // "databaseFilename": ""
+      }
+    }
+  ],
+  "version": 4
+}

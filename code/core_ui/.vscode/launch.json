@@ -1,0 +1,81 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Build & Debug",
+      "cwd": "${workspaceRoot}",
+      "executable": "./Debug/old_core_ui.axf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "pyocd",
+      "serverArgs": [
+        "-b",
+        "02270000076d23bf00000000000000000000000097969905",
+        "--fast_program",
+        "--semihosting"
+        // "-r",
+        // "-R",
+        // "50002"
+        // "--semihost-console",
+        // "telnet"
+        // "--gdb-syscall"
+      ],
+      "interface": "swd",
+      // "device": "MIMXRT1021xxxxx",
+      "device": "mimxrt1010",
+      // "svdFile": "${workspaceRoot}/MIMXRT1011.xml",
+      "runToMain": true,
+      // "overrideRestartCommands": [
+      //   "load",
+      //   "monitor break-insert -t --function main",
+      //   "monitor reset"
+      // ],
+      "preRestartCommands": [
+        // "monitor break-insert -t --function main"
+        // "file ./Debug/core_ui.axf",
+        // "load",
+        // "enable breakpoint",
+        // "monitor reset"
+      ],
+      "postRestartCommands": [
+        // "monitor break-insert -t --function main"
+      ],
+      "postLaunchCommands": ["monitor arm semihosting enable"],
+      "preLaunchTask": "Build & Upload"
+    },
+    {
+      "name": "Debug only",
+      "cwd": "${workspaceRoot}",
+      "executable": "./Debug/old_core_ui.axf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "pyocd",
+      "serverArgs": [
+        "-b",
+        "02270000076d23bf00000000000000000000000097969905",
+        "--semihosting",
+        "--semihost-console",
+        "telnet"
+      ],
+      "interface": "swd",
+      "device": "mimxrt1010",
+      // "svdFile": "${workspaceRoot}/MIMXRT1011.xml",
+      "runToMain": true,
+      // "overrideRestartCommands": [
+      //   "load",
+      //   "monitor break-insert -t --function main",
+      //   "monitor reset"
+      // ],
+      "preRestartCommands": [
+        // "monitor break-insert -t --function main"
+        // "file ./Debug/core_ui.axf",
+        // "load",
+        // "enable breakpoint",
+        // "monitor reset"
+      ],
+      "postRestartCommands": [
+        // "monitor break-insert -t --function main"
+      ]
+    }
+  ]
+}

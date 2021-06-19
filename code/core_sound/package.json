@@ -1,0 +1,12 @@
+{
+  "name": "core_sound",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node scripts/dev.js"
+  },
+  "devDependencies": {
+    "commander": "^7.0.0"
+  }
+}

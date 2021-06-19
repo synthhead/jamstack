@@ -1,0 +1,6 @@
+*startup_*.o (.text.*)
+*system_*.o (.text.*)
+*(.text.main)
+*(.text.__main)
+*(.flashfunc)
+*(.flashmem)
